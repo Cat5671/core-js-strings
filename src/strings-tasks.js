@@ -38,7 +38,7 @@ function getStringLength(value) {
  *   isString(new String('test')) => true
  */
 function isString(value) {
-  return typeof value === 'string';
+  return ( typeof value ) === 'string';
 }
 
 /**
