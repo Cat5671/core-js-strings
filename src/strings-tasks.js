@@ -151,7 +151,7 @@ function repeatString(str, times) {
  */
 function removeFirstOccurrences(str, value) {
   const lenStr = str.indexOf(value);
-  return lenStr === -1 ? str : str.substr(0, lenStr) + str.substr(lenStr + value.length);
+  return lenStr === -1 ? str : str.slice(0, lenStr) + str.slice(lenStr + value.length);
 }
 
 /**
@@ -168,7 +168,7 @@ function removeFirstOccurrences(str, value) {
  */
 function removeLastOccurrences(str, value) {
   const lenStr = str.lastIndexOf(value);
-  return lenStr === -1 ? str : str.substr(0, lenStr) + str.substr(lenStr + value.length);  
+  return lenStr === -1 ? str : str.slice(0, lenStr) + str.slice(lenStr + value.length);  
 }
 
 /**
