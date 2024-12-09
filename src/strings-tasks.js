@@ -150,8 +150,11 @@ function repeatString(str, times) {
  *   removeFirstOccurrences('ABABAB', 'BA') => 'ABAB'.
  */
 function removeFirstOccurrences(str, value) {
-  const lenStr = str.indexOf(value);
-  return lenStr === -1 ? str : str.slice(0, lenStr) + str.slice(lenStr + value.length);
+  const index = str.indexOf(value);
+  if (str.indexOf(value) === -1) {
+    return str;
+  }
+  return str.slice(0, index) + str.slice(index + value.length);
 }
 
 /**
@@ -166,9 +169,12 @@ function removeFirstOccurrences(str, value) {
  *   removeLastOccurrences('I like legends', 'end') => 'I like legs'.
  *   removeLastOccurrences('ABABAB', 'BA') => 'ABAB'.
  */
-function removeLastOccurrences(str, value) {
-  const lenStr = str.lastIndexOf(value);
-  return lenStr === -1 ? str : str.slice(0, lenStr) + str.slice(lenStr + value.length);  
+function removeFirstOccurrences(str, value) {
+  const index = str.indexOf(value);
+  if (str.indexOf(value) === -1) {
+    return str;
+  }
+  return str.slice(0, index) + str.slice(index + value.length);
 }
 
 /**
