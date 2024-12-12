@@ -443,8 +443,8 @@ function unbracketTag(str) {
  *   ],
  *   'info@gmail.com' => ['info@gmail.com']
  */
-function extractEmails(str) {
-  return str.split(';');
+function extractEmails(/* str */) {
+  throw new Error('Not implemented');
 }
 
 /**
