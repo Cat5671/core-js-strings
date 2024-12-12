@@ -334,13 +334,8 @@ function isPalindrome(str) {
  *   findLongestWord('A long and winding road') => 'winding'
  *   findLongestWord('No words here') => 'words'
  */
-function findLongestWord(sentence) {
-  return sentence
-    .split(' ')
-    .reduce(
-      (longest, word) => (word.length > longest.length ? word : longest),
-      ''
-    );
+function findLongestWord(/* sentence */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -353,13 +348,8 @@ function findLongestWord(sentence) {
  *   reverseWords('Hello World') => 'olleH dlroW'
  *   reverseWords('The Quick Brown Fox') => 'ehT kciuQ nworB xoF'
  */
-function reverseWords(str) {
-  return str
-    .split(' ')
-    .map((word) => {
-      return word.split('').reverse().join('');
-    })
-    .join(' ');
+function reverseWords(/* str */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -373,13 +363,8 @@ function reverseWords(str) {
  *   invertCase('JavaScript is Fun') => 'jAVAsCRIPT IS fUN'
  *   invertCase('12345') => '12345'
  */
-function invertCase(str) {
-  return str
-    .split('')
-    .map((char) =>
-      char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()
-    )
-    .join('');
+function invertCase(/* str */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -443,8 +428,8 @@ function unbracketTag(str) {
  *   ],
  *   'info@gmail.com' => ['info@gmail.com']
  */
-function extractEmails(/* str */) {
-  throw new Error('Not implemented');
+function extractEmails(str) {
+  return str.split(';');
 }
 
 /**
