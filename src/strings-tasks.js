@@ -57,7 +57,7 @@ function isString(value) {
  *   concatenateStrings('', 'bb') => 'bb'
  */
 function concatenateStrings(value1, value2) {
-  return value1.concat(value2);
+  return value1 + value2;
 }
 
 /**
@@ -134,7 +134,7 @@ function removeTrailingWhitespaces(value) {
  *   repeatString('abc', -2) => ''
  */
 function repeatString(str, times) {
-  return times >= 0 ? str.repeat(times) : '';
+  return times > 0 ? str.repeat(times) : '';
 }
 
 /**
@@ -331,8 +331,8 @@ function countVowels(str) {
  *   isPalindrome('No lemon, no melon') => true
  */
 function isPalindrome(str) {
-  const normalized = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
-  return normalized === normalized.split('').reverse().join('');
+  const newStr = str.toLowerCase();
+  return newStr === newStr.split('').reverse().join('');
 }
 
 /**
@@ -351,7 +351,7 @@ function findLongestWord(sentence) {
   return sentence
     .split(' ')
     .reduce(
-      (longest, word) => (word.length > longest.length ? word : longest),
+      (maxWord, word) => (word.length > maxWord.length ? word : maxWord),
       ''
     );
 }
